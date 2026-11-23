@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main id="main">{children}</main>
         <Footer />
-        <a className="mobile-book" href="https://book.heygoldie.com/In-House-Massage/checkout">Book now</a>
+        <div className="mobile-bar"><a href="tel:+61407448644">Call Chris</a><a className="mb-book" href="https://book.heygoldie.com/In-House-Massage/checkout">Book a massage</a></div>
       </body>
     </html>
   );
