@@ -1,0 +1,24 @@
+# LOG
+
+## 23 Nov 2026
+- Project created. Captured live site (home, about, reviews, couples). Waiting on scope answers before building.
+- Built full concept: home, 7 massage pages, reviews (33 x 5-star Google), about. Palette reef #073B4C / brand cyan #00AEEF / sun #F7C548; Young Serif + Figtree. Signature = "where the table has been set up" list from real reviews.
+- Pushed public repo mmhfarooque/massagemenow-concept; deployed massagemenow-concept.vercel.app (all pages 200, noindex).
+- Open: owner review; no phone number on live site so none used; Chris photo assumed = chris-scaled.jpg.
+- v2 (spa/resort direction, built without the design skill): Cormorant Garamond + Montserrat, sand/ocean/gold, full-bleed hero, stats band, treatment cards, mobile sticky Book bar. Folder site-v2/, repo branch v2, live https://massagemenow-concept-v2.vercel.app. v1 stays on main + massagemenow-concept.vercel.app.
+- v3 VIBRANT (owner: "v2 is the right direction, make a vibrant version replacing v1"): v2 layout + tropical palette (lagoon #023E58, ocean #007DAA, brand cyan #00AEEF, coral #F2545B, sunshine #FFC531, sand #FFF4E6). On main, live at https://massagemenow-concept.vercel.app. v1 design only in git history (commit 9900929). v2 unchanged on branch v2 + massagemenow-concept-v2.vercel.app.
+- Email to Chris drafted: email/EMAIL.md + 4 screenshots (not sent; no mail tool, his address unknown).
+- FULL SITE rebuild (owner: "you didn't include FAQ / all content", competitor = weblancer.studio/message-me-now/landing/, single landing page): crawled all 74 sitemap URLs (current-site/crawl, content.json), generator -> site/lib/content.json. 29 pages live: home (full long-form guide + 10 FAQs + articles), 7 massage pages (full content + FAQs + TOC), 10 articles, /articles + /article, 35 FAQs grouped (/frequently-asked-questions + /faq), contact (0407 448 644, cjpannan@gmail.com), join-the-team, about-us, our-reviews, privacy, terms. Original URLs kept. Extras: Find-my-massage picker, Google badge, marquee, mobile Call/Book bar, sticky TOC, scroll reveal. All 200, noindex.
+- Email screenshots retaken on full site; EMAIL.md addressed to cjpannan@gmail.com; not sent. Chris's email from his contact page: cjpannan@gmail.com.
+- HOMEPAGE "WOW" REDESIGN (owner: beat competitor beta, don't mimic): WebGL water-ripple hero (components/HeroWater.js, mouse/touch ripples + ambient drops, reduced-motion off), glass booking panel, word reveal, pinned horizontal "We come to you" gallery (HScroll.js), count-up stats, stacking colour booking steps, add-ons (Lumenate + sound healing, from competitor page/Chris info), review river, wave dividers, 2-col FAQ, final CTA card. Long text moved to /mobile-massage-guide/. Verified via CDP scroll captures (scratchpad cdp.mjs) at 1440 and 390, no horizontal overflow.
+- Video: only video found is on competitor build (weblancer "massage me 2.0.mp4") - NOT used. Need Chris's own footage or licensed stock.
+- Below-hero drama (23 Nov): expanding massage gallery (.accord), zoom-through (.zoom, ScrollVars pin), 3D stacking image step cards (.scard, ScrollVars stack). Live.
+- Finder made dramatic (23 Nov): full-bleed photo per need with circular clip-path reveal from click point, numbered serif options, glass match card. Live.
+- v2 = "Night Lagoon" DARK edition (23 Nov): site-v2/ = copy of main + app/dark.css (starfield, cyan/coral gradient text, moonlit hero, neon 3D stack). Branch v2, live https://massagemenow-concept-v2.vercel.app (noindex). Main light site unchanged at massagemenow-concept.vercel.app. To update v2 after main changes: rsync site/ -> site-v2/ (keep dark.css + layout import), build, deploy from site-v2.
+- v2 RE-DONE as CORPORATE DARK (23 Nov, owner: clean smart corporate, slow smooth animation, don't copy): site-v2/app/corporate.css (graphite #0B0F14, champagne #C8A96A, hairlines), Plus Jakarta Sans, components/Smooth.js (Lenis 1.3 smooth scroll + IO reveal). dark.css removed. Live v2 link.
+- v3 'Slow Hands' (23 Nov): site-v3/ (app/v3.css, Spotlight/HoldToBook/Journey/Places/SlowQuotes, Lenis). Bottom nav, sideways journey desktop, vertical mobile. Branch v3, live https://massagemenow-concept-v3.vercel.app (noindex). main + v2 untouched.
+
+## STATUS at end of 23 Nov 2026
+- Three versions live (all noindex): main light https://massagemenow-concept.vercel.app · v2 corporate dark https://massagemenow-concept-v2.vercel.app · v3 Slow Hands https://massagemenow-concept-v3.vercel.app
+- Git: branches main / v2 / v3 pushed to github.com/mmhfarooque/massagemenow-concept; PROJECT.md in each branch mirrors README.
+- OPEN: owner to pick a direction · confirm competitor-sourced facts with Chris (studio address, island packages, add-ons, review count) · retake email screenshots + send (not sent) · video: need Chris's own footage or licensed stock (competitor's mp4 NOT used) · optional: rewrite first commit to remove owner email from public history.
