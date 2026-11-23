@@ -9,6 +9,7 @@ import Counter from '../components/Counter';
 import ReviewRiver from '../components/ReviewRiver';
 import Wave from '../components/Wave';
 import HeroWater from '../components/HeroWater';
+import ScrollVars from '../components/ScrollVars';
 import { BOOK_URL, PHONE, PHONE_LABEL, EMAIL, ADDRESS, AREAS, massages, reviews, stays, steps, addons } from '../lib/data';
 import content from '../lib/content.json';
 
@@ -54,6 +55,7 @@ export default function Home() {
         </div>
       </section>
       <Marquee />
+      <ScrollVars />
 
       {/* FINDER */}
       <Finder />
@@ -65,13 +67,30 @@ export default function Home() {
             <div><p className="eyebrow">Our massages</p><h2>Seven treatments, <em>all mobile</em></h2></div>
             <p>Every massage comes to you with all equipment supplied. Also available on request: sports, pregnancy and fertility, post-surgery and weight loss massage.</p>
           </div>
-          <div className="t-grid">
-            {massages.map(m => (
-              <Link key={m.slug} href={`/massage/${m.slug}/`} className="t-card">
-                <div className="t-img"><img src={m.img} alt="" width="600" height="420" loading="lazy" /></div>
-                <div className="t-body"><h3>{m.name}</h3><p>{m.short}</p><span className="t-more">Learn more</span></div>
+          <div className="accord">
+            {massages.map((m, i) => (
+              <Link key={m.slug} href={`/massage/${m.slug}/`} className="acc" style={{ '--i': i }}>
+                <img src={m.img} alt="" width="900" height="700" loading="lazy" />
+                <span className="acc-n">0{i + 1}</span>
+                <span className="acc-v">{m.name}</span>
+                <span className="acc-body">
+                  <span className="acc-h">{m.name}</span>
+                  <span className="acc-p">{m.short}</span>
+                  <span className="acc-go">Explore <Icon name="arrow" size={16} /></span>
+                </span>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ZOOM-THROUGH */}
+      <section className="zoom" data-sp="pin">
+        <div className="zoom-stick">
+          <div className="zoom-frame"><img src="/img/sunset.webp" alt="" width="1600" height="1067" loading="lazy" /></div>
+          <div className="zoom-copy">
+            <p>Wherever the Whitsundays take you,</p>
+            <h2>we bring the <em>calm</em>.</h2>
           </div>
         </div>
       </section>
@@ -111,25 +130,31 @@ export default function Home() {
       </section>
       <Wave top="#023e58" bottom="#fff" flip />
 
-      {/* HOW IT WORKS */}
-      <section className="how2">
-        <div className="wrap how2-grid">
-          <div>
-            <p className="eyebrow">Easy booking</p>
-            <h2>How booking <em>works</em></h2>
-            <p>Four simple steps from choosing your massage to lying back and relaxing.</p>
-            <a className="btn btn-ocean" href={BOOK_URL}>Start booking</a>
+      {/* HOW IT WORKS: 3D stacking image cards */}
+      <section className="how3">
+        <div className="wrap">
+          <div className="sec-top">
+            <div><p className="eyebrow">Easy booking</p><h2>Four steps to <em>total calm</em></h2></div>
+            <p>From choosing your massage to lying back and relaxing. Most people are booked in about a minute.</p>
           </div>
-          <ol className="steps2">
+          <div className="stack">
             {steps.map((s, i) => (
-              <li key={s.title}>
-                <span className="step-ico"><Icon name={s.icon} size={24} /></span>
-                <span className="step-n">Step {i + 1}</span>
-                <h3>{s.title}</h3>
-                <p>{s.text}</p>
-              </li>
+              <article key={s.title} className="scard" data-sp="stack" style={{ '--i': i }}>
+                <div className="scard-in">
+                  <div className="scard-img"><img src={s.img} alt="" width="900" height="700" loading="lazy" /></div>
+                  <div className="scard-txt">
+                    <span className="scard-num">0{i + 1}</span>
+                    <span className="step-ico"><Icon name={s.icon} size={26} /></span>
+                    <h3>{s.title}</h3>
+                    <p>{s.text}</p>
+                    {i === steps.length - 1
+                      ? <a className="btn btn-gold btn-arrow" href={BOOK_URL}>Book your massage <span><Icon name="arrow" size={18} /></span></a>
+                      : <span className="scard-next">Next: {steps[i + 1].title}</span>}
+                  </div>
+                </div>
+              </article>
             ))}
-          </ol>
+          </div>
         </div>
       </section>
 
