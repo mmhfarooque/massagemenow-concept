@@ -47,7 +47,7 @@ export default async function MassagePage({ params }) {
             <h2>Good for</h2>
             <ul className="ticks">{m.goodFor.map(g => <li key={g}>{g}</li>)}</ul>
           </div>
-          <figure className="voice voice-plain">
+          <figure className="voice">
             <Stars />
             <blockquote><p>{quote.text}</p></blockquote>
             <figcaption>{quote.name}</figcaption>
