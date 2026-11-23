@@ -1,4 +1,4 @@
-# Massage Me Now — design rehaul concept (v3 vibrant: v2 layout, tropical palette)
+# Massage Me Now — design rehaul concept (v3: "Slow Hands" — upside-down nav, sideways journey, touch-lit photos)
 
 Concept redesign of [massagemenow.com](https://massagemenow.com) (Airlie Beach mobile massage, Chris Pannan).
 Next.js 15 static export. Content and photos come from the live site; reviews are the site's Google reviews.
