@@ -1,4 +1,4 @@
-# Massage Me Now — design rehaul concept (v2: "Night Lagoon" dark edition)
+# Massage Me Now — design rehaul concept (v2: corporate dark edition)
 
 Concept redesign of [massagemenow.com](https://massagemenow.com) (Airlie Beach mobile massage, Chris Pannan).
 Next.js 15 static export. Content and photos come from the live site; reviews are the site's Google reviews.
