@@ -20,6 +20,7 @@ export default function Footer() {
           <ul>
             <li><Link href="/frequently-asked-questions/">FAQs</Link></li>
             <li><Link href="/articles/">Articles</Link></li>
+            <li><Link href="/mobile-massage-guide/">Mobile massage guide</Link></li>
             <li><Link href="/about-us/">About us</Link></li>
             <li><Link href="/contact-us/">Contact us</Link></li>
             <li><Link href="/our-reviews/">Our reviews</Link></li>
