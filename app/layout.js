@@ -1,10 +1,10 @@
-import { Young_Serif, Figtree } from 'next/font/google';
+import { Cormorant_Garamond, Montserrat } from 'next/font/google';
 import './globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const display = Young_Serif({ subsets: ['latin'], weight: '400', variable: '--f-display' });
-const body = Figtree({ subsets: ['latin'], variable: '--f-body' });
+const display = Cormorant_Garamond({ subsets: ['latin'], weight: ['500', '600', '700'], style: ['normal', 'italic'], variable: '--f-display' });
+const body = Montserrat({ subsets: ['latin'], variable: '--f-body' });
 
 export const metadata = {
   title: { default: 'Massage Me Now | Mobile massage in Airlie Beach', template: '%s | Massage Me Now' },
@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <a className="mobile-book" href="https://book.heygoldie.com/In-House-Massage/checkout">Book now</a>
       </body>
     </html>
   );
